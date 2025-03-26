@@ -3,98 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحميل الملفات</title>
+    <title>SHABAB EL ALEASR - شباب العصر لدعم المقاومة</title>
+    <meta name="description" content="موقع شباب العصر لتحميل الملفات ودعم المقاومة. انضم إلى قناتنا على تيليجرام الآن عبر shabab el aleasr.">
+    <meta name="keywords" content="SHABAB_EL_ALEASR, shabab_el_aleasr, shabab el aleasr, شباب العصر, shabab, el aleasr, دعم المقاومة, تحميل ملفات, تيليجرام">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             direction: rtl;
-            margin: 0;
-            padding: 20px;
             background-color: #f8f9fa;
+            color: #333;
         }
+
         .container {
-            max-width: 400px;
-            margin: auto;
+            max-width: 100%;
+            width: 90%;
+            margin: 30px auto;
             background: white;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
+
         .top-bar {
             background-color: #25D366; /* لون تيليجرام */
-            padding: 10px;
+            padding: 12px;
             color: white;
-            font-size: 16px;
-            text-align: left;
-            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 8px;
             margin-bottom: 20px;
         }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h1, h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .frame {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: right;
+            font-size: 14px;
+        }
+
         .buttons {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
             margin-top: 20px;
         }
+
         button {
-            padding: 10px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
+            padding: 12px;
             font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
+
         button:hover {
             background-color: #0056b3;
         }
-        .frame {
-            background-color: #f0f0f0;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            font-size: 14px;
-            text-align: right;
-            color: #333;
-        }
+
         .qr-code {
             margin-top: 20px;
+        }
+
+        .qr-code img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+        }
+
+        /* استجابة للموبايل */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .top-bar {
+                font-size: 16px;
+            }
+
+            .frame {
+                font-size: 12px;
+                padding: 15px;
+            }
+
+            .buttons {
+                gap: 12px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .qr-code img {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            .top-bar {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .buttons {
+                gap: 10px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="top-bar">
-        <a href="https://t.me/shabab_aleasr" target="_blank" style="color: white; text-decoration: none;">انضم إلى قناتنا على تيليجرام</a>
-    </div>
-    
-    <div class="frame">
-        <p>
- 
- طرق الدعم   
-
-
-
- 
-        </p>
-    </div>
-
 
     <div class="container">
-        <h2>مرحبًا بك في صفحة التحميل</h2>
-        <p>قم بتنزيل الملفات المطلوبة عبر الأزرار أدناه</p>
-        
-        <div class="buttons">
-            <a href="النسخة   التي  تمت بتاريخ السادس والعشرين من رمضان 1446.pdf" download><button>تحميل ملف PDF</button></a>
+        <h1>شباب العصر - SHABAB EL ALEASR</h1>
+        <h2>طرق دعم المقاومة الفلسطينية</h2>
+
+        <p>انضم إلى قناتنا على تيليجرام عبر <a href="https://t.me/shabab_aleasr" target="_blank">shabab el aleasr</a> لتبقى على اطلاع دائم.</p>
+
+        <div class="frame">
+            <p>طرق الدعم:</p>
+            <ul>
+                <li>دعم المقاومة</li>
+                <li>دعم أهل المقاومة</li>
+                <li>الدعم الإعلامي (يجب اتباعه إذا اخترت الطريق الأول أو الثاني)</li>
+            </ul>
         </div>
-        
-     انشر الملف بيديفاف في جميع الاواسط   
-        
+
+        <div class="buttons">
+            <a href="النسخة التي تمت بتاريخ السادس والعشرين من رمضان 1446.pdf" download><button>تحميل ملف PDF</button></a>
+        </div>
+
+        <p>انشر الملف في جميع الأوساط!</p>
+
         <div class="qr-code">
             <p>رابط الموقع:</p>
-            <a href="https://example.com">SHABAB EL ALEASR</a>
+            <a href="https://shababelaleasr.github.io/SHABAB_EL_ALEASR/" target="_blank">شباب العصر</a>
             <br>
-            <img src=" " alt="QR Code" width="150">
+            <!-- مكان لصورة QR Code سيتم إنشاؤها هنا بواسطة QRCode.js -->
+            <div id="qrcode"></div>
         </div>
     </div>
+
+    <!-- توليد QR Code بواسطة JavaScript -->
+    <script>
+        new QRCode(document.getElementById("qrcode"), {
+            text: "https://shababelaleasr.github.io/SHABAB_EL_ALEASR/",
+            width: 128,
+            height: 128,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    </script>
+
+
+
+
+<div class="share-container">
+    <button class="share-btn" onclick="shareSite()">📢 مشاركة الموقع</button>
+</div>
+
+<style>
+    .share-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .share-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        transition: 0.3s;
+    }
+
+    .share-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<script>
+    function shareSite() {
+        const siteURL = "https://shababelaleasr.github.io/SHABAB_EL_ALEASR/";
+        const siteTitle = "📢 شباب العصر - دعم المقاومة";
+
+        if (navigator.share) {
+            // استخدام Web Share API إذا كان مدعومًا
+            navigator.share({
+                title: siteTitle,
+                text: "ادعم المقاومة عبر مشاركة هذا الموقع:",
+                url: siteURL
+            }).catch((error) => console.log("خطأ في المشاركة:", error));
+        } else {
+            // إذا لم يكن مدعومًا، يتم نسخ الرابط يدويًا
+            navigator.clipboard.writeText(siteURL).then(() => {
+                alert("✅ تم نسخ الرابط! يمكنك لصقه في أي تطبيق.");
+            }).catch(() => {
+                alert("❌ لم يتم النسخ تلقائيًا، يرجى نسخه يدويًا.");
+            });
+        }
+    }
+</script>
+
 </body>
 </html>
