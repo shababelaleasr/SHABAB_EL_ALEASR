@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHABAB EL ALEASR - شباب العصر لدعم المقاومة</title>
+    <title>SHABAB  ALEASR - شباب العصر لدعم المقاومة</title>
     <meta name="description" content="موقع شباب العصر لتحميل الملفات ودعم المقاومة. انضم إلى قناتنا على تيليجرام الآن عبر shabab el aleasr.">
     <meta name="keywords" content="SHABAB_EL_ALEASR, shabab_el_aleasr, shabab el aleasr, شباب العصر, shabab, el aleasr, دعم المقاومة, تحميل ملفات, تيليجرام">
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
@@ -77,11 +77,12 @@
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease-in-out;
         }
 
         button:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
         }
 
         .qr-code {
@@ -96,13 +97,13 @@
 
         /* استجابة للموبايل */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 24px;
-            }
-
             .container {
                 width: 95%;
                 padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
             }
 
             .top-bar {
@@ -125,16 +126,18 @@
 
             .qr-code img {
                 max-width: 90%;
+                margin-top: 20px;
             }
         }
 
         @media (max-width: 480px) {
-            h1 {
-                font-size: 20px;
-            }
-
             .container {
                 width: 100%;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 20px;
             }
 
             .top-bar {
@@ -150,13 +153,38 @@
                 font-size: 14px;
                 padding: 10px;
             }
+
+            .qr-code {
+                margin-top: 15px;
+            }
+        }
+
+        .share-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .share-btn {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .share-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>شباب العصر - SHABAB EL ALEASR</h1>
+        <h1>شباب العصر </h1>
         <h2>طرق دعم المقاومة الفلسطينية</h2>
 
         <p>انضم إلى قناتنا على تيليجرام عبر <a href="https://t.me/shabab_aleasr" target="_blank">shabab el aleasr</a> لتبقى على اطلاع دائم.</p>
@@ -169,99 +197,61 @@
                 <li>الدعم الإعلامي (يجب اتباعه إذا اخترت الطريق الأول أو الثاني)</li>
             </ul>
         </div>
-
-        <div class="buttons">
-            <a href="النسخة26رمضان 1446.pdf" download>
-                <button>تحميل ملف الشرح مع روابط PDF</button>
-            </a>
-                    
-                    </div>
-
-        <p>انشر الملف  في جميع الأوساط!</p>
+        <a href="النسخة26رمضان 1446.pdf" id="download-link" style="display:none;" download></a>
+        <button onclick="downloadFile()">تحميل ملف الشرح مع روابط PDF</button>
+        
+        <script>
+            function downloadFile() {
+                // الحصول على الرابط المخفي
+                var downloadLink = document.getElementById("download-link");
+                // تنفيذ تحميل الملف
+                downloadLink.click();
+            }
+        </script>
+        
+        <p>انشر الملف في جميع الأوساط!</p>
 
         <div class="qr-code">
             <p>رابط الموقع:</p>
             <a href="https://shababelaleasr.github.io/SHABAB_EL_ALEASR/" target="_blank">شباب العصر</a>
             <br>
-            <!-- مكان لصورة QR Code سيتم إنشاؤها هنا بواسطة QRCode.js -->
             <div id="qrcode"></div>
         </div>
 
-
-
-
-
-
-
-
-        
-
-<div class="share-container">
-    <button class="share-btn" onclick="shareSite()">📢 مشاركة الموقع</button>
-</div>
+        <div class="share-container">
+            <button class="share-btn" onclick="shareSite()">📢 مشاركة الموقع</button>
+        </div>
     </div>
 
-
-
-    <!-- توليد QR Code بواسطة JavaScript -->
     <script>
         new QRCode(document.getElementById("qrcode"), {
             text: "https://shababelaleasr.github.io/SHABAB_EL_ALEASR/",
             width: 128,
             height: 128,
-            colorDark : "#000000",
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
         });
-    </script>
 
+        function shareSite() {
+            const siteURL = "https://shababelaleasr.github.io/SHABAB_EL_ALEASR/";
+            const siteTitle = "📢 شباب العصر - دعم المقاومة";
 
-
-
-<style>
-    .share-container {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .share-btn {
-        padding: 12px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        background-color: #007bff;
-        color: white;
-        transition: 0.3s;
-    }
-
-    .share-btn:hover {
-        background-color: #0056b3;
-    }
-</style>
-
-<script>
-    function shareSite() {
-        const siteURL = "https://shababelaleasr.github.io/SHABAB_EL_ALEASR/";
-        const siteTitle = "📢 شباب العصر - دعم المقاومة";
-
-        if (navigator.share) {
-            // استخدام Web Share API إذا كان مدعومًا
-            navigator.share({
-                title: siteTitle,
-                text: "ادعم المقاومة عبر مشاركة هذا الموقع:",
-                url: siteURL
-            }).catch((error) => console.log("خطأ في المشاركة:", error));
-        } else {
-            // إذا لم يكن مدعومًا، يتم نسخ الرابط يدويًا
-            navigator.clipboard.writeText(siteURL).then(() => {
-                alert("✅ تم نسخ الرابط! يمكنك لصقه في أي تطبيق.");
-            }).catch(() => {
-                alert("❌ لم يتم النسخ تلقائيًا، يرجى نسخه يدويًا.");
-            });
+            if (navigator.share) {
+                navigator.share({
+                    title: siteTitle,
+                    text: "ادعم المقاومة عبر مشاركة هذا الموقع:",
+                    url: siteURL
+                }).catch((error) => console.log("خطأ في المشاركة:", error));
+            } else {
+                navigator.clipboard.writeText(siteURL).then(() => {
+                    alert("✅ تم نسخ الرابط! يمكنك لصقه في أي تطبيق.");
+                }).catch(() => {
+                    alert("❌ لم يتم النسخ تلقائيًا، يرجى نسخه يدويًا.");
+                });
+            }
         }
-    }
-</script>
+    </script>
 
 </body>
 </html>
