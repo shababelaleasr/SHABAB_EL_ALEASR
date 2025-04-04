@@ -183,7 +183,8 @@
 </head>
 <body>
 
-    <div class="container">
+ 
+  <div class="responsive-container">
         <div style="
         background-color: #3a3a3a; /* خلفية داكنة أنيقة */
         color: #ffffff;           /* نص أبيض واضح */
@@ -419,12 +420,81 @@
                 font-size: 14px;
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* جعل المحتوى يتكيف مع مختلف الشاشات */
+.responsive-container {
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+   
+    color: #f1f1f1;
+    font-family: 'Tajawal', sans-serif;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+}
+
+/* جعل النصوص والصور تتكيف مع الشاشات الصغيرة */
+.responsive-container p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ضبط التباعد للعناصر الداخلية */
+.responsive-container h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ff4d4d;
+}
+
+.responsive-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* تحسين العرض على الشاشات الصغيرة (الهواتف) */
+@media (max-width: 768px) {
+    .responsive-container {
+        width: 95%;
+        padding: 10px;
+    }
+    .responsive-container h2 {
+        font-size: 20px;
+    }
+    .responsive-container p {
+        font-size: 16px;
+    }
+}
+
     </style>
 </head>
 <body>
 
 <!-- المقال الرئيسي -->
-<div class="container">
+<div class="responsive-container">
 
 <div style="text-align:center;padding:2rem">
     <h1 style="color:#b30000;font-size:2rem;text-shadow:0 0 10px #ff0000;font-family:'Tajawal',sans-serif">
