@@ -170,13 +170,59 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <style>
+        /* التنسيق العام */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+    
         body {
             font-family: 'Tahoma', sans-serif;
             background-color: #f8f8f8;
@@ -184,39 +230,41 @@
             margin: 0;
             padding: 0;
         }
-
+    
         /* هيدر */
         .header {
             background: url('path_to_islamic_pattern.jpg') no-repeat center center/cover;
-            padding: 40px;
+            padding: 40px 20px;
             text-align: center;
             position: relative;
             z-index: 1;
-            background-color: rgba(0, 0, 0, 0.5); /* تأثير الظل لزيادة وضوح النص */
+            background-color: rgba(0, 0, 0, 0.5);
         }
-
+    
         .header h1 {
-            color: #FFD700; /* اللون الذهبي */
-            font-size: 48px;
-            font-family: 'Amiri', serif; /* خط عربي جميل */
+            color: #FFD700;
+            font-size: 36px;
+            font-family: 'Amiri', serif;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
         }
-
+    
+        /* قائمة التنقل */
         .navbar ul {
             list-style-type: none;
             padding: 0;
             text-align: center;
+            margin: 0;
         }
-
+    
         .navbar ul li {
             display: inline-block;
-            margin: 0 15px;
+            margin: 0 10px;
         }
-
+    
         .navbar ul li a {
-            font-family: 'Amiri', serif; /* خط عربي للملاحة */
+            font-family: 'Amiri', serif;
             color: white;
             text-decoration: none;
             font-size: 18px;
@@ -228,12 +276,12 @@
             border-radius: 8px;
             transition: all 0.3s ease;
         }
-
+    
         .navbar ul li a:hover {
             background-color: rgba(255, 255, 255, 0.2);
             color: #FFD700;
         }
-
+    
         .navbar ul li a:after {
             content: '';
             position: absolute;
@@ -246,181 +294,122 @@
             transform-origin: bottom right;
             transition: transform 0.25s ease-out;
         }
-
+    
         .navbar ul li a:hover:after {
             transform: scaleX(1);
             transform-origin: bottom left;
         }
-
-        /* أقسام */
-        section {
-            padding: 50px;
-            background-color: #ffffff;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        section h2 {
-            font-size: 30px;
-            color: #1a73e8;
-            margin-bottom: 20px;
-        }
-
-        section p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        button {
-            background-color: #ff6347;
-            color: white;
-            padding: 15px 30px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #e53e34;
-        }
-
+    
         /* استجابة للموبايل */
-        @media (max-width: 768px) {
-            .navbar ul li {
-                display: block;
-                margin: 10px 0;
-            }
-
+        @media (max-width: 767px) {
+            /* الهيدر */
             .header h1 {
                 font-size: 28px;
+                margin-bottom: 10px;
             }
-
-            section {
-                padding: 30px;
-            }
-
-            .navbar {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
+    
+            /* قائمة التنقل على الهواتف */
             .navbar ul li {
-                margin: 10px 0;
+                display: block; /* جعل الأزرار تظهر عمودية */
+                margin: 15px 0; /* زيادة المسافة بين الأزرار */
             }
-
+    
+            .navbar ul li a {
+                padding: 12px 20px;
+                font-size: 16px;
+                width: 100%; /* جعل الأزرار تأخذ عرض الصفحة بالكامل */
+                box-sizing: border-box;
+            }
+    
             .header {
+                padding: 20px 20px; /* تقليل الحواف */
+            }
+    
+            section {
+                padding: 30px 15px;
+                margin: 15px 0;
+            }
+    
+            section h2 {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+    
+            section p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+    
+            button, .download-button {
+                width: 100%;
                 padding: 15px;
+                font-size: 14px;
+                margin-top: 10px;
+                box-sizing: border-box;
             }
         }
-
-        /* زر تحميل PDF */
-        .download-button {
-            background-color: #00796b;
-            color: white;
-            padding: 15px 25px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 15px 0;
-        }
-
-        .download-button:hover {
-            background-color: #004d40;
+    
+        /* استجابة للأجهزة الكبيرة */
+        @media (min-width: 1200px) {
+            .header h1 {
+                font-size: 50px; /* تكبير حجم النص على الشاشات الكبيرة */
+                margin-bottom: 20px;
+            }
+    
+            .navbar ul li {
+                margin: 0 20px;
+            }
+    
+            .navbar ul li a {
+                font-size: 20px;
+            }
+    
+            section {
+                display: flex;
+                justify-content: space-around;
+                padding: 60px 30px;
+            }
+    
+            section h2 {
+                font-size: 36px;
+            }
+    
+            section p {
+                font-size: 18px;
+                max-width: 600px;
+            }
         }
     </style>
-</head>
-<body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <header class="header">
-        <h1>شباب العصر</h1>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">الصفحة الرئيسية دعم فلسطين </a></li>
-                <li><a href="kodowat.html">القدوات المعاصرة  </a></li>
-                <li><a href="issues">قضايا العصر</a></li>
-                <li><a href="PDFFILES.html">تحميل ملفات PDF</a></li>
-                <li><a href="contact">تواصل معنا</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    
+    <body>
+        <header class="header">
+            <h1>شباب العصر</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">الصفحة الرئيسية دعم فلسطين</a></li>
+                    &nbsp; 
+                    <li><a href="jornalist.html">الصحافييون والمراسلون الفلسطينيون</a></li>
+                    &nbsp; 
+                    <li><a href="kodowat.html">القدوات المعاصرة</a></li>
+                    &nbsp;  
+                    <li><a href="kadaya elasr.html">قضايا العصر</a></li>
+                 
+                </ul>
+                <br>      <br>     
+              <ul>   &nbsp;   
+                  
+                    <li><a href="PDFFILES.html">تحميل ملفات PDF</a></li>
+                 
+                 
+                    &nbsp;   &nbsp;  &nbsp; 
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+
+    
+    
 
 
     <div style="
