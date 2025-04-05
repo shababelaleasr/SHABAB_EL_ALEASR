@@ -1,409 +1,3 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHABAB  ALEASR - شباب العصر لدعم المقاومة</title>
-    <meta name="description" content="موقع شباب العصر لتحميل الملفات ودعم المقاومة. انضم إلى قناتنا على تيليجرام الآن عبر shabab el aleasr.">
-    <meta name="keywords" content="SHABAB_EL_ALEASR, shabab_el_aleasr, shabab el aleasr, شباب العصر, shabab, el aleasr, دعم المقاومة, تحميل ملفات, تيليجرام">
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            direction: rtl;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-
-        .container {
-            max-width: 100%;
-            width: 90%;
-            margin: 30px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .top-bar {
-            background-color: #25D366; /* لون تيليجرام */
-            padding: 12px;
-            color: white;
-            font-size: 18px;
-            text-align: center;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .top-bar a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        h1, h2 {
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .frame {
-            background-color: #f0f0f0;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            text-align: right;
-            font-size: 14px;
-        }
-
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        button {
-            padding: 12px;
-            font-size: 16px;
-            color: white;
-            background-color: #007bff;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
-
-        .qr-code {
-            margin-top: 20px;
-        }
-
-        .qr-code img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 15px;
-        }
-
-        /* استجابة للموبايل */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 22px;
-            }
-
-            .top-bar {
-                font-size: 16px;
-            }
-
-            .frame {
-                font-size: 12px;
-                padding: 15px;
-            }
-
-            .buttons {
-                gap: 12px;
-            }
-
-            button {
-                font-size: 14px;
-                padding: 10px;
-            }
-
-            .qr-code img {
-                max-width: 90%;
-                margin-top: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                width: 100%;
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 20px;
-            }
-
-            .top-bar {
-                font-size: 14px;
-                padding: 10px;
-            }
-
-            .buttons {
-                gap: 10px;
-            }
-
-            button {
-                font-size: 14px;
-                padding: 10px;
-            }
-
-            .qr-code {
-                margin-top: 15px;
-            }
-        }
-
-        .share-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .share-btn {
-            padding: 12px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .share-btn:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /* جعل المحتوى يتكيف مع مختلف الشاشات */
-.container {
-    max-width: 100%;
-    width: 90%;
-    margin: 0 auto;
-    padding: 15px;
-    border-radius: 10px;
-
-    font-family: 'Tajawal', sans-serif;
-    text-align: center;
-}
-
-/* جعل النصوص والصور تتكيف مع الشاشات الصغيرة */
-.container p {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-/* ضبط التباعد للعناصر الداخلية */
-.container h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-.container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-/* تحسين العرض على الشاشات الصغيرة (الهواتف) */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 10px;
-    }
-    .container h2 {
-        font-size: 20px;
-    }
-    .container p {
-        font-size: 16px;
-    }
-}
-
-    </style>
-</head>
-<body>
-
- 
-    <div class="container">
-        <div style="
-        background-color: #3a3a3a; /* خلفية داكنة أنيقة */
-        color: #ffffff;           /* نص أبيض واضح */
-        font-family: 'Tajawal', sans-serif;
-        text-align: center;
-        padding: 40px 20px;
-        border-radius: 12px;
-        box-shadow: 0 0 25px rgba(0, 128, 0, 0.5);
-        max-width: 800px;
-        margin: 40px auto;
-    ">
-    
-        <h1 style="
-            font-size: 48px;
-            color: #00FF7F; /* لون أخضر فاتح لامع */
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        ">
-            شباب العصر
-        </h1>
-    
-        <h2 style="
-            font-size: 28px;
-            color: #FFD700; /* ذهبي */
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-        ">
-            طرق دعم المقاومة الفلسطينية
-        </h2>
-    
-    </div>
-  
-
-
-
-
-
-    <p>انضم إلى قناتنا على تيليجرام عبر <a href="https://t.me/shabab_al_easr" target="_blank">https://t.me/shabab_al_easr </a> لتبقى على اطلاع دائم.</p>
-
-    <div class="frame">
-        <p>طرق الدعم:</p>
-        <ul>
-            <li>دعم المقاومة</li>
-            <li>دعم أهل المقاومة</li>
-            <li>الدعم الإعلامي (يجب اتباعه إذا اخترت الطريق الأول أو الثاني)</li>
-        </ul>
-    </div>
- 
-
-        <a href="النسخة26رمضان 1446.pdf" id="download-link" style="display:none;" download></a>
-        <button onclick="downloadFile()">تحميل ملف يحتوي على غالبية محتوى الموقع  مع روابط PDF</button>
-        
-        <script>
-            function downloadFile() {
-                // الحصول على الرابط المخفي
-                var downloadLink = document.getElementById("download-link");
-                // تنفيذ تحميل الملف
-                downloadLink.click();
-            }
-        </script>
-        
-        <p>انشر الملف في جميع الأوساط!</p>
-
-        <div style="
-        background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
-        color: #f1f1f1;
-        font-family: 'Tajawal', sans-serif;
-        padding: 30px;
-        border-radius: 12px;
-        max-width: 750px;
-        margin: 50px auto;
-        direction: rtl;
-        text-align: right;
-        box-shadow: 0 0 25px rgba(0, 255, 0, 0.1);
-        border: 1px solid #444;
-        line-height: 2;
-    ">
-    
-        <p style="font-size: 19px; color: #e0e0e0;">
-            ما سيتم إضافاته مستقبلًا بإذن الله الواحد الاحد الصمد  ومشيئته:  
-            <span style="color: #ff4d4d;">حسابات وسائط التواصل</span>  
-            للعديد من الصحافيين والناشطين على وسائل التواصل الفلسطينيين.
-        </p>
-    
-        <p style="font-size: 20px; font-weight: bold; color: #00ff88; margin-top: 25px;">
-            نصر الله أمتنا  امة اشهد ان لا اله الا الله وان محمد رسول  الله  إن شاء الله، وأعاد مجدها ووحدتها.
-        </p>
-    </div>
-    
-
-        <div class="qr-code">
-            <p>رابط الموقع:</p>
-            <a href="https://shababelaleasr.github.io/SHABAB_EL_ALEASR/" target="_blank">شباب العصر</a>
-            <br>
-            <div id="qrcode"></div>
-        </div>
-
-        <div class="share-container">
-            <button class="share-btn" onclick="shareSite()">📢 مشاركة الموقع</button>
-        </div>
-    </div>
-
-    <script>
-        new QRCode(document.getElementById("qrcode"), {
-            text: "https://shababelaleasr.github.io/SHABAB_EL_ALEASR/",
-            width: 128,
-            height: 128,
-            colorDark: "#000000",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.H
-        });
-
-        function shareSite() {
-            const siteURL = "https://shababelaleasr.github.io/SHABAB_EL_ALEASR/";
-            const siteTitle = "📢 شباب العصر - دعم المقاومة";
-
-            if (navigator.share) {
-                navigator.share({
-                    title: siteTitle,
-                    text: "ادعم المقاومة عبر مشاركة هذا الموقع:",
-                    url: siteURL
-                }).catch((error) => console.log("خطأ في المشاركة:", error));
-            } else {
-                navigator.clipboard.writeText(siteURL).then(() => {
-                    alert("✅ تم نسخ الرابط! يمكنك لصقه في أي تطبيق.");
-                }).catch(() => {
-                    alert("❌ لم يتم النسخ تلقائيًا، يرجى نسخه يدويًا.");
-                });
-            }
-        }
-    </script>
-
-</body>
-</html>
-
-
 
 
 
@@ -573,6 +167,344 @@
 </head>
 <body>
 
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* هيدر */
+        .header {
+            background: url('path_to_islamic_pattern.jpg') no-repeat center center/cover;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.5); /* تأثير الظل لزيادة وضوح النص */
+        }
+
+        .header h1 {
+            color: #FFD700; /* اللون الذهبي */
+            font-size: 48px;
+            font-family: 'Amiri', serif; /* خط عربي جميل */
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            font-family: 'Amiri', serif; /* خط عربي للملاحة */
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            padding: 12px 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #FFD700;
+        }
+
+        .navbar ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #FFD700;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .navbar ul li a:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* أقسام */
+        section {
+            padding: 50px;
+            background-color: #ffffff;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 30px;
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        button {
+            background-color: #ff6347;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e53e34;
+        }
+
+        /* استجابة للموبايل */
+        @media (max-width: 768px) {
+            .navbar ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            section {
+                padding: 30px;
+            }
+
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+
+            .header {
+                padding: 15px;
+            }
+        }
+
+        /* زر تحميل PDF */
+        .download-button {
+            background-color: #00796b;
+            color: white;
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 15px 0;
+        }
+
+        .download-button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <header class="header">
+        <h1>شباب العصر</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">الصفحة الرئيسية دعم فلسطين </a></li>
+                <li><a href="kodowat.html">القدوات المعاصرة  </a></li>
+                <li><a href="issues">قضايا العصر</a></li>
+                <li><a href="PDFFILES.html">تحميل ملفات PDF</a></li>
+                <li><a href="contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div style="
+    background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
+    color: #f1f1f1;
+    font-family: 'Tajawal', sans-serif;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 750px;
+    margin: 50px auto;
+    direction: rtl;
+    text-align: right;
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.1);
+    border: 1px solid #444;
+    line-height: 2;
+    word-wrap: break-word;
+    width: 100%;
+">
+    <p style="font-size: 19px; color: #e0e0e0;">
+        ما سيتم إضافاته مستقبلًا بإذن الله الواحد الاحد الصمد  ومشيئته:  
+<br>
+
+🔻
+        <span style="color: #ff4d4d;">حسابات وسائل التواصل
+          
+        </span>  
+        للعديد من الصحافيين والناشطين على وسائل التواصل الفلسطينيين.
+    </p>
+
+    <p>
+        🔻
+        حسابات بعض  القدوات المعاصرة  علما ان على كل مسلم الاقتداء بخير الانام  الرسول  الشهيد المصطفى  الامين  محمد صلى الله عليه وسلم
+    </p>
+
+    <p>
+        🔻
+        قضايا الامة الاسلامية  وما يواجهه شبابها خاصة ومسملومها  
+        التي سترفع من قبلكم  على طريقة سرية 
+        لعل احدهم يجبتهد ويوفقه الله ليكون  سببا  لحلها 
+    </p>
+    <p style="font-size: 20px; font-weight: bold; color: #00ff88; margin-top: 25px;">
+        نصر الله أمتنا  امة اشهد ان لا اله الا الله وان محمد رسول  الله  إن شاء الله، وأعاد مجدها ووحدتها.
+    </p>
+</div>
+
+
+
+<!-- إضافة Media Query لتوافق مع الهواتف -->
+<style>
+    @media screen and (max-width: 768px) {
+        div {
+            padding: 20px;
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        
+        p {
+            font-size: 15px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        div {
+            padding: 15px;
+            font-size: 14px;
+        }
+        
+        p {
+            font-size: 13px;
+        }
+    }
+</style>
+
+  
+  
+  
+
+
+
+
+<br><br>
+
+
+    
 <!-- المقال الرئيسي -->
 <div class="container">
 
@@ -582,6 +514,7 @@
     </h1>
   </div>
   
+
 
 
 
